@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tools.HomeScreenController">
+   <children>
+      <Label layoutY="1.0" prefHeight="24.0" prefWidth="600.0" text="                                               ELMS Tools">
+         <font>
+            <Font name="System Bold Italic" size="19.0" />
+         </font></Label>
+      <Label layoutX="89.0" layoutY="127.0" text="ELMS R Generator" />
+      <Button id="PWRGen" fx:id="PWRGen" layoutX="269.0" layoutY="73.0" mnemonicParsing="false" onAction="#rgen" prefHeight="31.0" prefWidth="117.0" style="-fx-background-color: #319bdd;" text="R Generator" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="14.0" />
+         </font></Button>
+      <Button id="pextract" fx:id="pextract" layoutX="268.0" layoutY="185.0" mnemonicParsing="false" onAction="#prodETractor" style="-fx-background-color: #319bdd;" text="Prod ExTractor" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="14.0" />
+         </font></Button>
+      <Button id="lextract" fx:id="lextract" layoutX="269.0" layoutY="310.0" mnemonicParsing="false" onAction="#LogETract" prefHeight="31.0" prefWidth="117.0" style="-fx-background-color: #319bdd;" text="Log Extractor" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="14.0" />
+         </font></Button>
+      <Label layoutX="90.0" layoutY="246.0" text="Prod Data Extractor" />
+      <Label layoutX="105.0" layoutY="354.0" text="Log Extractot" />
+      <ImageView id="HSIhicon" fx:id="HSIhicon" fitHeight="42.0" fitWidth="43.0" layoutX="531.0" layoutY="15.0" onMouseClicked="#GoHome" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="file:/C:/Software/exe/Images/Home%20Icons/home%20(1).png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="72.0" fitWidth="88.0" layoutX="105.0" layoutY="52.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="file:/C:/Software/exe/ELMS%20Tools/Images/ELMS-extractor.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="72.0" fitWidth="80.0" layoutX="105.0" layoutY="170.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="file:/C:/Software/exe/ELMS%20Data%20Extractor/Images/ELMS-%20Splash.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="60.0" fitWidth="80.0" layoutX="105.0" layoutY="289.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="file:/C:/Software/exe/Log%20Extractor/Images/LogExtractor.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

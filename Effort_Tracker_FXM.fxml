@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="552.0" prefWidth="666.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tools.Effort_Tracker_FXMController">
+    <children>
+        <Label fx:id="label" layoutX="126" layoutY="120" minHeight="16" minWidth="69" />
+      <TabPane prefHeight="552.0" prefWidth="666.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Effort Tracker">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="212.0" layoutY="21.0" text="Data Extraction">
+                           <font>
+                              <Font name="System Bold Italic" size="19.0" />
+                           </font></Label>
+                        <Label id="etluname" fx:id="etluname" layoutX="408.0" layoutY="24.0" text="User Name">
+                           <font>
+                              <Font name="System Bold Italic" size="14.0" />
+                           </font></Label>
+                        <Label id="etlpwd" fx:id="etlpwd" layoutX="408.0" layoutY="66.0" prefHeight="21.0" prefWidth="79.0" text="Password">
+                           <font>
+                              <Font name="System Bold Italic" size="14.0" />
+                           </font></Label>
+                        <TextField id="ettfuname" fx:id="ettfuname" layoutX="494.0" layoutY="19.0" prefHeight="31.0" prefWidth="149.0" />
+                        <Label id="etltname" fx:id="etltname" layoutX="49.0" layoutY="158.0" text="Table Name" />
+                        <ComboBox id="etcbtname" fx:id="etcbtname" layoutX="183.0" layoutY="153.0" prefWidth="150.0" />
+                        <Label id="etlfc" fx:id="etlfc" layoutX="49.0" layoutY="228.0" prefHeight="21.0" prefWidth="119.0" text="Filtering Criteria" />
+                        <CheckBox id="etckbehrs" fx:id="etckbehrs" layoutX="183.0" layoutY="228.0" mnemonicParsing="false" text="&lt;27 Hours" />
+                        <CheckBox id="etckbffhrs" fx:id="etckbffhrs" layoutX="183.0" layoutY="276.0" mnemonicParsing="false" text="&lt;45 Hours" />
+                        <CheckBox id="etckball" fx:id="etckball" layoutX="183.0" layoutY="324.0" mnemonicParsing="false" text="All" />
+                        <TextArea id="etopta" fx:id="etopta" layoutX="382.0" layoutY="139.0" prefHeight="325.0" prefWidth="259.0" promptText="output" />
+                        <Button id="etebutton" fx:id="etebutton" layoutX="151.0" layoutY="379.0" mnemonicParsing="false" onAction="#Extract" prefHeight="31.0" prefWidth="95.0" style="-fx-background-color: #319bdd;" text="Extract" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold Italic" size="14.0" />
+                           </font></Button>
+                        <Button id="etfilpath" fx:id="etfilpath" layoutX="395.0" layoutY="101.0" mnemonicParsing="false" onAction="#SelectFile" prefHeight="21.0" prefWidth="69.0" style="-fx-background-color: #319bdd;" text="File" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold Italic" size="14.0" />
+                           </font></Button>
+                        <TextField id="ettffilpath" fx:id="ettffilpath" layoutX="464.0" layoutY="101.0" prefHeight="31.0" prefWidth="160.0" promptText="Select Location" />
+                        <PasswordField id="ettfpwd" fx:id="ettfpwd" layoutX="494.0" layoutY="61.0" prefHeight="31.0" prefWidth="151.0" />
+                        <Button id="taclear" fx:id="taclear" layoutX="477.0" layoutY="468.0" mnemonicParsing="false" onAction="#TextClear" prefHeight="31.0" prefWidth="69.0" style="-fx-background-color: #319bdd;" text="Clear" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold Italic" size="14.0" />
+                           </font></Button>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="Settings">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label id="etsltname" fx:id="etsltname" layoutX="41.0" layoutY="59.0" text="Table Name" />
+                        <Button id="etsbad" fx:id="etsbad" layoutX="129.0" layoutY="160.0" mnemonicParsing="false" onAction="#Add_Delete" style="-fx-background-color: #319bdd;" text="Add/Delete" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold Italic" size="14.0" />
+                           </font></Button>
+                        <RadioButton id="etsrbadd" fx:id="etsrbadd" layoutX="63.0" layoutY="110.0" mnemonicParsing="false" text="Add">
+                           <toggleGroup>
+                              <ToggleGroup fx:id="Sel1" />
+                           </toggleGroup>
+                        </RadioButton>
+                        <RadioButton id="etsrbdelete" fx:id="etsrbdelete" layoutX="210.0" layoutY="110.0" mnemonicParsing="false" text="Delete" toggleGroup="$Sel1" />
+                        <Separator layoutX="363.0" layoutY="-2.0" orientation="VERTICAL" prefHeight="511.0" prefWidth="0.0" />
+                        <Label id="etsleid" fx:id="etsleid" layoutX="392.0" layoutY="94.0" text="Employee ID" />
+                        <TextField id="etstfeid" fx:id="etstfeid" layoutX="493.0" layoutY="89.0" prefHeight="31.0" prefWidth="142.0" />
+                        <Label id="etslpname" fx:id="etslpname" layoutX="399.0" layoutY="165.0" text="Project" />
+                        <Label id="etltname" fx:id="etltname" layoutX="399.0" layoutY="240.0" text="Team" />
+                        <Label id="etslclev" fx:id="etslclev" layoutX="400.0" layoutY="323.0" text="Career Level" />
+                        <TextField id="etstfpname" fx:id="etstfpname" layoutX="493.0" layoutY="160.0" prefHeight="31.0" prefWidth="145.0" />
+                        <TextField id="etstfclev" fx:id="etstfclev" layoutX="493.0" layoutY="318.0" prefHeight="31.0" prefWidth="148.0" />
+                        <Button id="etsbgaccess" fx:id="etsbgaccess" layoutX="461.0" layoutY="401.0" mnemonicParsing="false" onAction="#GrantAccess" style="-fx-background-color: #319bdd;" text="Grant Access" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold Italic" size="14.0" />
+                           </font></Button>
+                        <Label layoutX="126.0" layoutY="15.0" text="Add New Table">
+                           <font>
+                              <Font name="System Bold Italic" size="19.0" />
+                           </font></Label>
+                        <Label layoutX="422.0" layoutY="15.0" text="Access to Effort Tracker">
+                           <font>
+                              <Font name="System Bold Italic" size="19.0" />
+                           </font></Label>
+                        <Separator layoutX="1.0" layoutY="219.0" prefHeight="2.0" prefWidth="361.0" />
+                        <Label id="etslupuname" fx:id="etslupuname" layoutX="33.0" layoutY="272.0" text="User Name" />
+                        <Label id="etslcpwd" fx:id="etslcpwd" layoutX="32.0" layoutY="323.0" text="Current Password" />
+                        <Label id="etslnpwd" fx:id="etslnpwd" layoutX="33.0" layoutY="372.0" text="New Password" />
+                        <Label id="etslconpwd" fx:id="etslconpwd" layoutX="31.0" layoutY="417.0" text="Confirm Password" />
+                        <Button id="etsbup" fx:id="etsbup" layoutX="127.0" layoutY="467.0" mnemonicParsing="false" onAction="#Update_Password" prefHeight="31.0" prefWidth="95.0" style="-fx-background-color: #319bdd;" text="Update" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold Italic" size="14.0" />
+                           </font></Button>
+                        <TextField id="etsrfuname" fx:id="etsrfuname" layoutX="201.0" layoutY="267.0" prefHeight="31.0" prefWidth="141.0" />
+                        <PasswordField id="etspcpwd" fx:id="etspcpwd" layoutX="200.0" layoutY="318.0" prefHeight="31.0" prefWidth="141.0" />
+                        <Label id="etslup" fx:id="etslup" layoutX="119.0" layoutY="230.0" text="Update Password">
+                           <font>
+                              <Font name="System Bold Italic" size="19.0" />
+                           </font></Label>
+                        <TextField id="etstftname" fx:id="etstftname" layoutX="493.0" layoutY="238.0" prefHeight="31.0" prefWidth="144.0" />
+                        <TextField id="etstftname" fx:id="etstftname" layoutX="152.0" layoutY="54.0" />
+                        <PasswordField id="etspnpwd" fx:id="etspnpwd" layoutX="201.0" layoutY="367.0" prefHeight="31.0" prefWidth="140.0" />
+                        <PasswordField id="etspconpwd" fx:id="etspconpwd" layoutX="201.0" layoutY="412.0" prefHeight="31.0" prefWidth="141.0" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+    </children>
+</AnchorPane>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="426.0" prefWidth="584.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tools.Accenture_Tools_FXMLController">
+    <children>
+        <Label fx:id="label" layoutX="164.0" layoutY="100.0" minHeight="16" minWidth="69" text="User Name">
+         <font>
+            <Font name="System Bold Italic" size="15.0" />
+         </font></Label>
+      <Label layoutX="164.0" layoutY="155.0" text="Password">
+         <font>
+            <Font name="System Bold Italic" size="15.0" />
+         </font></Label>
+      <TextField id="htfuname" fx:id="huname" layoutX="299.0" layoutY="95.0" promptText="User Name (Case Sensitive)" />
+      <PasswordField id="htfpwd" fx:id="hpwd" layoutX="299.0" layoutY="150.0" prefHeight="31.0" prefWidth="187.0" promptText="Password (Case Sensitive)" />
+      <Button id="Bhlogin" fx:id="Bhlogin" layoutX="254.0" layoutY="238.0" mnemonicParsing="false" onAction="#Login" onMouseExited="#outRange" onMouseMoved="#inRange" prefHeight="30.0" prefWidth="86.0" style="-fx-background-color: #319bdd;" text="Login" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="14.0" />
+         </font></Button>
+      <Label layoutX="-3.0" layoutY="4.0" prefHeight="31.0" prefWidth="584.0" text="                                        Accenture Tools Login">
+         <font>
+            <Font name="System Bold Italic" size="19.0" />
+         </font></Label>
+      <Label id="htfstatus" fx:id="htfstatus" layoutX="178.0" layoutY="320.0" prefHeight="21.0" prefWidth="241.0" />
+    </children>
+</AnchorPane>
