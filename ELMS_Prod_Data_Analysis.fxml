@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="566.0" prefWidth="831.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tools.ELMS_Prod_Data_AnalysisController">
+    <children>
+      <TabPane prefHeight="566.0" prefWidth="831.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab id="pals" fx:id="unot" onSelectionChanged="#uNotificationSChanged" text="Prod Analysis">
+            <content>
+              <AnchorPane id="pAlys" fx:id="pAlys" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <DatePicker id="undpsd" fx:id="undpsd" layoutX="416.0" layoutY="82.0" prefHeight="31.0" prefWidth="159.0" />
+                        <DatePicker id="undped" fx:id="undped" layoutX="416.0" layoutY="162.0" prefHeight="31.0" prefWidth="159.0" />
+                        <Button id="unbextract" fx:id="unbextract" layoutX="377.0" layoutY="264.0" mnemonicParsing="false" onAction="#ExtractData" prefHeight="31.0" prefWidth="100.0" style="-fx-background-color: #319bdd;" text="Extract" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold Italic" size="14.0" />
+                           </font></Button>
+                        <Label id="unlsd" fx:id="unlsd" layoutX="262.0" layoutY="87.0" text="Start Date" />
+                        <Label id="unled" fx:id="unled" layoutX="261.0" layoutY="167.0" prefHeight="21.0" prefWidth="69.0" text="End Date" />
+                        <ProgressBar id="unpbar" fx:id="unpbar" layoutX="62.0" layoutY="345.0" prefHeight="23.0" prefWidth="730.0" progress="0.0" />
+                        <TextArea id="unta" fx:id="unta" layoutX="159.0" layoutY="381.0" prefHeight="140.0" prefWidth="547.0" />
+                        <Separator layoutX="28.0" layoutY="62.0" orientation="VERTICAL" prefHeight="200.0" />
+                        <Separator layoutX="31.0" layoutY="61.0" prefWidth="200.0" />
+                        <Separator layoutX="231.0" layoutY="62.0" orientation="VERTICAL" prefHeight="200.0" />
+                        <Separator layoutX="31.0" layoutY="261.0" prefWidth="200.0" />
+                        <Separator layoutX="606.0" layoutY="63.0" prefWidth="200.0" />
+                        <Separator layoutX="606.0" layoutY="62.0" orientation="VERTICAL" prefHeight="200.0" />
+                        <Separator layoutX="606.0" layoutY="263.0" prefWidth="200.0" />
+                        <Separator layoutX="803.0" layoutY="62.0" orientation="VERTICAL" prefHeight="200.0" />
+                        <Label id="palstl" fx:id="palstl" layoutX="102.0" layoutY="29.0" prefHeight="21.0" prefWidth="58.0" text="Tables">
+                           <font>
+                              <Font name="System Bold Italic" size="16.0" />
+                           </font></Label>
+                        <Label id="palssml" fx:id="palssml" layoutX="631.0" layoutY="31.0" text="Segregation Method">
+                           <font>
+                              <Font name="System Bold Italic" size="16.0" />
+                           </font></Label>
+                        <CheckBox id="ptcbclp" fx:id="ptcbclp" layoutX="56.0" layoutY="87.0" mnemonicParsing="false" onAction="#CTBCLP" prefHeight="21.0" prefWidth="75.0" text="CLP" />
+                        <CheckBox id="ptcbunot" fx:id="ptcbunot" layoutX="54.0" layoutY="152.0" mnemonicParsing="false" onAction="#PTCBUN" prefHeight="21.0" prefWidth="154.0" text="Usage Notification" />
+                        <CheckBox id="ptcbess" fx:id="ptcbess" layoutX="56.0" layoutY="214.0" mnemonicParsing="false" onAction="#PTCBESS" text="Entitlement Snapshot" />
+                        <CheckBox id="psmcbhb" fx:id="psmcbhb" layoutX="628.0" layoutY="87.0" mnemonicParsing="false" onAction="#PSMCBHB" text="Hourly Basis" />
+                        <CheckBox id="psmcbdb" fx:id="psmcbdb" layoutX="628.0" layoutY="152.0" mnemonicParsing="false" onAction="#PSMCBDB" text="Daily Basis" />
+                        <CheckBox id="psmcbmb" fx:id="psmcbmb" layoutX="628.0" layoutY="214.0" mnemonicParsing="false" onAction="#PSMCBMB" text="Monthly Basis" />
+                        <Label id="palshl" fx:id="palshl" layoutX="334.0" layoutY="16.0" text="Prod Data Analysis">
+                           <font>
+                              <Font name="System Bold Italic" size="19.0" />
+                           </font></Label>
+                        <ImageView id="simv" fx:id="simv" fitHeight="25.0" fitWidth="41.0" layoutX="21.0" layoutY="394.0" pickOnBounds="true" preserveRatio="true" />
+                        <Label id="sl" fx:id="sl" layoutX="94.0" layoutY="396.0" text="Label" visible="false" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="Machines">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <VBox layoutX="10.0" layoutY="20.0" prefHeight="527.0" prefWidth="831.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <children>
+                              <BarChart id="bgraph" fx:id="bgraph" title="Analysis ">
+                                <xAxis>
+                                  <CategoryAxis id="gdsnl" fx:id="gdsnl" label="Time Duration" side="BOTTOM" />
+                                </xAxis>
+                                <yAxis>
+                                  <NumberAxis id="gucountl" fx:id="gucountl" label="Usage Count" side="LEFT" />
+                                </yAxis>
+                              </BarChart>
+                           </children>
+                        </VBox>
+                     </children></AnchorPane>
+            </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+    </children>
+</AnchorPane>

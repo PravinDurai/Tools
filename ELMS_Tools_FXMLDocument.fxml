@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="457.0" prefWidth="611.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tools.ELMS_Tools_FXMLDocumentController">
+    <children>
+      <Label layoutX="-2.0" layoutY="-3.0" prefHeight="28.0" prefWidth="611.0" text="                                                 ELMS Tools">
+         <font>
+            <Font name="System Bold Italic" size="19.0" />
+         </font></Label>
+      <Button id="msblogin" fx:id="msblogin" layoutX="269.0" layoutY="315.0" mnemonicParsing="false" onAction="#Login" prefHeight="30.0" prefWidth="73.0" style="-fx-background-color: #319bdd;" text="Login" textFill="WHITE">
+         <font>
+            <Font name="System Bold Italic" size="14.0" />
+         </font></Button>
+      <Label layoutX="164.0" layoutY="163.0" text="User Name">
+         <font>
+            <Font name="System Bold Italic" size="14.0" />
+         </font></Label>
+      <Label layoutX="164.0" layoutY="245.0" text="Password">
+         <font>
+            <Font name="System Bold Italic" size="14.0" />
+         </font></Label>
+      <PasswordField id="mstfun" fx:id="mstfun" layoutX="285.0" layoutY="158.0" promptText="User Name" />
+      <PasswordField id="mstfpwd" fx:id="mstfpwd" layoutX="285.0" layoutY="240.0" promptText="Password (Case Sensitive)" />
+      <ImageView id="mcimg2" fx:id="mcimg2" fitHeight="106.0" fitWidth="149.0" layoutX="428.0" layoutY="25.0" pickOnBounds="true" preserveRatio="true" />
+      <ImageView id="mcimg1" fx:id="mcimg1" fitHeight="123.0" fitWidth="111.0" focusTraversable="true" layoutX="26.0" layoutY="25.0" pickOnBounds="true" preserveRatio="true" smooth="false">
+         <image>
+            <Image url="file:/C:/Software/exe/ELMS%20Tools/Images/ELMS-extractor1.png" />
+         </image>
+      </ImageView>
+    </children>
+</AnchorPane>

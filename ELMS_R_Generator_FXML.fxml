@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="extractor" fx:id="extractor" prefHeight="555.0" prefWidth="579.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tools.ELMS_R_Generator_FXMLController">
+    <children>
+        <Label fx:id="label" layoutX="126" layoutY="120" minHeight="16" minWidth="69" />
+      <TabPane id="TabbedPane" fx:id="TabbedPane" layoutY="-1.0" prefHeight="555.0" prefWidth="579.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+            <Tab id="isilon" fx:id="isilon" text="Isilon">
+              <content>
+                <AnchorPane id="isln" fx:id="isln" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Separator layoutX="26.0" layoutY="285.0" prefHeight="0.0" prefWidth="524.0" />
+                        <Separator layoutX="22.0" layoutY="285.0" orientation="VERTICAL" prefHeight="216.0" prefWidth="0.0" />
+                        <Separator layoutX="24.0" layoutY="504.0" prefHeight="0.0" prefWidth="528.0" />
+                        <Separator layoutX="549.0" layoutY="285.0" orientation="VERTICAL" prefHeight="221.0" prefWidth="0.0" />
+                        <Label layoutX="208.0" layoutY="14.0" prefHeight="28.0" prefWidth="188.0" text="Isilon Data Extractor" textFill="#1f2022">
+                           <font>
+                              <Font name="System Bold Italic" size="19.0" />
+                           </font></Label>
+                        <Separator layoutX="287.0" layoutY="285.0" orientation="VERTICAL" prefHeight="220.0" prefWidth="1.0" />
+                        <HBox layoutX="143.0" layoutY="98.0" spacing="25.0">
+                           <children>
+                              <Label id="lstid" fx:id="lstid" text="Starting Transaction ID" />
+                              <TextField id="tfstid" fx:id="tfstid" />
+                           </children>
+                        </HBox>
+                        <HBox layoutX="143.0" layoutY="147.0" spacing="30.0">
+                           <children>
+                              <Label id="letid" fx:id="letid" text="Ending Transaction ID" />
+                              <TextField id="tfetid" fx:id="tfetid" />
+                           </children>
+                        </HBox>
+                        <VBox layoutX="239.0" layoutY="205.0">
+                           <children>
+                              <Button id="biedata" fx:id="biedata" mnemonicParsing="false" onAction="#BIEData" style="-fx-background-color: #319bdd; -fx-text-fill: white;" text="Extract Data" />
+                           </children>
+                        </VBox>
+                        <VBox layoutX="58.0" layoutY="254.0" prefHeight="18.0" prefWidth="469.0">
+                           <children>
+                              <ProgressBar id="ipbar" fx:id="ipbar" prefHeight="18.0" prefWidth="469.0" progress="0.0" />
+                           </children>
+                        </VBox>
+                        <HBox layoutX="317.0" layoutY="327.0" spacing="60.0">
+                           <children>
+                              <Label id="lsuccess" fx:id="lsuccess" prefHeight="30.0" prefWidth="60.0" text="Success" />
+                              <TextField id="tfsuccess" fx:id="tfsuccess" prefHeight="31.0" prefWidth="102.0" />
+                           </children>
+                        </HBox>
+                        <HBox layoutX="316.0" layoutY="413.0" spacing="76.0">
+                           <children>
+                              <Label id="lfailed" fx:id="lfailed" prefHeight="32.0" prefWidth="48.0" text="Failed" />
+                              <TextField id="tffailed" fx:id="tffailed" prefHeight="25.0" prefWidth="100.0" />
+                           </children>
+                        </HBox>
+                        <HBox layoutX="312.0" layoutY="465.0" spacing="40.0">
+                           <children>
+                              <Button id="bifind" fx:id="bifind" mnemonicParsing="false" onAction="#BIFind" prefHeight="25.0" prefWidth="88.0" style="-fx-background-color: #319bdd; -fx-text-fill: white;" text="Find" />
+                              <Button id="Boall" fx:id="Boall" mnemonicParsing="false" onAction="#BOAll" prefHeight="25.0" prefWidth="82.0" style="-fx-background-color: #319bdd; -fx-text-fill: white;" text="Over All" />
+                           </children>
+                        </HBox>
+                        <HBox layoutX="53.0" layoutY="297.0" prefHeight="19.0" prefWidth="225.0" spacing="50.0">
+                           <children>
+                              <RadioButton id="rinf" fx:id="rinf" mnemonicParsing="false" text="Infinity" textFill="#319bdd">
+                                 <toggleGroup>
+                                    <ToggleGroup fx:id="Parent" />
+                                 </toggleGroup>
+                                 <font>
+                                    <Font name="Calibri Bold Italic" size="13.0" />
+                                 </font>
+                              </RadioButton>
+                              <RadioButton id="rninf" fx:id="rninf" mnemonicParsing="false" prefHeight="19.0" prefWidth="107.0" text="NoNInfinity" textFill="#319bdd" toggleGroup="$Parent">
+                                 <font>
+                                    <Font name="Calibri Bold Italic" size="13.0" />
+                                 </font>
+                              </RadioButton>
+                           </children>
+                        </HBox>
+                        <VBox layoutX="45.0" layoutY="339.0" spacing="50.0">
+                           <children>
+                              <RadioButton id="rcus" fx:id="rcus" mnemonicParsing="false" text="Customer" textFill="#319bdd">
+                                 <toggleGroup>
+                                    <ToggleGroup fx:id="User" />
+                                 </toggleGroup>
+                                 <font>
+                                    <Font name="Calibri Bold Italic" size="12.0" />
+                                 </font>
+                              </RadioButton>
+                              <RadioButton id="remp" fx:id="remp" mnemonicParsing="false" text="Employee" textFill="#319bdd" toggleGroup="$User">
+                                 <font>
+                                    <Font name="Calibri Bold Italic" size="12.0" />
+                                 </font>
+                              </RadioButton>
+                              <RadioButton id="rpart" fx:id="rpart" mnemonicParsing="false" text="Partner" textFill="#319bdd" toggleGroup="$User">
+                                 <font>
+                                    <Font name="Calibri Bold Italic" size="12.0" />
+                                 </font>
+                              </RadioButton>
+                           </children>
+                        </VBox>
+                        <VBox layoutX="208.0" layoutY="339.0" spacing="50.0">
+                           <children>
+                              <RadioButton id="rsml" fx:id="rsml" mnemonicParsing="false" text="Small" textFill="#319bdd">
+                                 <toggleGroup>
+                                    <ToggleGroup fx:id="FilSize" />
+                                 </toggleGroup>
+                                 <font>
+                                    <Font name="Calibri Bold Italic" size="12.0" />
+                                 </font>
+                              </RadioButton>
+                              <RadioButton id="rmed" fx:id="rmed" mnemonicParsing="false" text="Medium" textFill="#319bdd" toggleGroup="$FilSize">
+                                 <font>
+                                    <Font name="Calibri Bold Italic" size="12.0" />
+                                 </font>
+                              </RadioButton>
+                              <RadioButton id="rlrg" fx:id="rlrg" mnemonicParsing="false" text="Large" textFill="#319bdd" toggleGroup="$FilSize">
+                                 <font>
+                                    <Font name="Calibri Bold Italic" size="12.0" />
+                                 </font>
+                              </RadioButton>
+                           </children>
+                        </VBox>
+                        <Label layoutX="388.0" layoutY="298.0" text="Validation" textFill="#319bdd">
+                           <font>
+                              <Font name="System Bold Italic" size="13.0" />
+                           </font>
+                        </Label>
+                        <HBox layoutX="316.0" layoutY="371.0" spacing="25.0">
+                           <children>
+                              <Label id="ipsuccess" fx:id="ipsuccess" prefHeight="29.0" prefWidth="99.0" text="Partial Success" />
+                              <TextField id="tfipsuccess" fx:id="tfipsuccess" prefHeight="25.0" prefWidth="99.0" />
+                           </children>
+                        </HBox>
+                     </children>
+                  </AnchorPane>
+              </content>
+            </Tab>
+          <Tab id="saasNPI" fx:id="saasNPI" onSelectionChanged="#saasTabSelected" text="SaaSNPI">
+            <content>
+              <AnchorPane id="saas" fx:id="saas" minHeight="0.0" minWidth="0.0" prefHeight="477.0" prefWidth="401.0">
+                     <children>
+                        <Label id="userbasedlaccreation" fx:id="userbasedlaccreation" layoutX="64.0" layoutY="26.0" prefHeight="28.0" prefWidth="223.0" text="User Based LAC Creation" textFill="#0f161b">
+                           <font>
+                              <Font name="System Bold Italic" size="19.0" />
+                           </font></Label>
+                        <Label id="userbasedactivation" fx:id="userbasedactivation" layoutX="122.0" layoutY="160.0" prefHeight="28.0" prefWidth="96.0" text="Activation" textFill="#0f1c25">
+                           <font>
+                              <Font name="System Bold Italic" size="19.0" />
+                           </font></Label>
+                        <Label id="autoactivlaccreation" fx:id="autoactivlaccreation" layoutX="77.0" layoutY="298.0" prefHeight="28.0" prefWidth="220.0" text="Auto Activ LAC Creation" textFill="#0e1a22">
+                           <font>
+                              <Font name="System Bold Italic" size="19.0" />
+                           </font></Label>
+                        <Label id="ulsn" fx:id="ulsn" layoutX="25.0" layoutY="78.0" text="Starting So Number" />
+                        <Label id="ules" fx:id="ules" layoutX="27.0" layoutY="120.0" text="Ending So Number" />
+                        <Label id="uasn" fx:id="uasn" layoutX="27.0" layoutY="198.0" text="Starting So Number" />
+                        <Label id="uaen" fx:id="uaen" layoutX="29.0" layoutY="243.0" text="Ending So Number" />
+                        <Label id="alsn" fx:id="alsn" layoutX="31.0" layoutY="344.0" text="Starting So Number" />
+                        <Label id="alen" fx:id="alen" layoutX="29.0" layoutY="385.0" text="Ending So Number" />
+                        <TextField id="ulsntf" fx:id="ulsntf" layoutX="188.0" layoutY="73.0" prefHeight="31.0" prefWidth="108.0" />
+                        <TextField id="ulentf" fx:id="ulentf" layoutX="187.0" layoutY="114.0" prefHeight="25.0" prefWidth="109.0" />
+                        <Separator layoutX="44.0" layoutY="284.0" prefHeight="0.0" prefWidth="293.0" />
+                        <Separator layoutX="33.0" layoutY="464.0" prefHeight="0.0" prefWidth="521.0" />
+                        <TextField id="uasntf" fx:id="uasntf" layoutX="186.0" layoutY="194.0" prefHeight="25.0" prefWidth="111.0" />
+                        <TextField id="uaentf" fx:id="uaentf" layoutX="185.0" layoutY="239.0" prefHeight="25.0" prefWidth="113.0" />
+                        <TextField id="alsntf" fx:id="alsntf" layoutX="191.0" layoutY="340.0" prefHeight="25.0" prefWidth="114.0" />
+                        <TextField id="alentf" fx:id="alentf" layoutX="190.0" layoutY="381.0" prefHeight="25.0" prefWidth="115.0" />
+                        <ProgressBar id="pbar1" fx:id="pbar1" layoutX="42.0" layoutY="479.0" prefHeight="18.0" prefWidth="499.0" progress="0.0" style="-fx-background-color: white;" />
+                        <Button id="extractDate" fx:id="extractDate" layoutX="269.0" layoutY="424.0" mnemonicParsing="false" onAction="#extractData" style="-fx-background-color: #319bdd; -fx-text-fill: white;" text="Extract Data" textFill="#ebecf0" />
+                        <Label id="linfo" fx:id="linfo" layoutX="42.0" layoutY="480.0" prefHeight="17.0" prefWidth="499.0" />
+                        <Separator layoutX="352.0" layoutY="65.0" orientation="VERTICAL" prefHeight="322.0" prefWidth="0.0" />
+                        <Button id="BUC" fx:id="BUC" layoutX="432.0" layoutY="166.0" mnemonicParsing="false" onAction="#BUBCount" prefHeight="17.0" prefWidth="99.0" style="-fx-background-color: #319bdd; -fx-text-fill: white;" text="UB Count" textFill="#ebecf0" />
+                        <Button id="BAAC" fx:id="BAAC" layoutX="433.0" layoutY="379.0" mnemonicParsing="false" onAction="#BAACount" prefHeight="17.0" prefWidth="98.0" style="-fx-background-color: #319bdd; -fx-text-fill: white;" text="AA Count" textFill="#ebecf0" />
+                        <Label id="lcomplete" fx:id="lcomplete" layoutX="383.0" layoutY="68.0" text="Complete" />
+                        <Label id="lvalidated" fx:id="lvalidated" layoutX="381.0" layoutY="118.0" prefHeight="21.0" prefWidth="69.0" text="Validated" />
+                        <Label layoutX="383.0" layoutY="291.0" text="Complete" />
+                        <Label layoutX="384.0" layoutY="339.0" text="Validated" />
+                        <TextField id="tfubc" fx:id="tfubc" layoutX="471.0" layoutY="64.0" prefHeight="25.0" prefWidth="69.0" />
+                        <TextField id="tfubv" fx:id="tfubv" layoutX="471.0" layoutY="114.0" prefHeight="25.0" prefWidth="69.0" />
+                        <TextField id="tfaac" fx:id="tfaac" layoutX="481.0" layoutY="287.0" prefHeight="25.0" prefWidth="69.0" />
+                        <TextField id="tfaav" fx:id="tfaav" layoutX="481.0" layoutY="335.0" prefHeight="25.0" prefWidth="69.0" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab id="usageThroughput" fx:id="usageThroughput" onSelectionChanged="#usageThroghputTabSelected" text="UsageThroughput">
+            <content>
+              <AnchorPane id="usage" fx:id="usage" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label id="heading" fx:id="heading" layoutX="148.0" layoutY="14.0" text="Usage Throughput Data Extractor" textFill="#12242f">
+                           <font>
+                              <Font name="System Bold Italic" size="19.0" />
+                           </font></Label>
+                        <Label id="ssno" fx:id="ssno" layoutX="14.0" layoutY="86.0" text="Starting Notification ID " />
+                        <Label id="esno" fx:id="esno" layoutX="14.0" layoutY="154.0" text="Ending Notification ID" />
+                        <Label id="setid" fx:id="setid" layoutX="85.0" layoutY="311.0" text="starting Event Transaction ID" />
+                        <Label id="eetid" fx:id="eetid" layoutX="85.0" layoutY="360.0" text="Ending Transaction ID" />
+                        <Label id="scid" fx:id="scid" layoutX="336.0" layoutY="86.0" text="Starting CLP ID" />
+                        <Label id="ecid" fx:id="ecid" layoutX="338.0" layoutY="154.0" text="Ending CLP ID" />
+                        <TextField id="ssnotf" fx:id="ssnotf" layoutX="171.0" layoutY="82.0" prefHeight="25.0" prefWidth="91.0" />
+                        <TextField id="esnotf" fx:id="esnotf" layoutX="170.0" layoutY="150.0" prefHeight="25.0" prefWidth="93.0" />
+                        <TextField id="scidtf" fx:id="scidtf" layoutX="443.0" layoutY="82.0" prefHeight="25.0" prefWidth="94.0" />
+                        <TextField id="ecidtf" fx:id="ecidtf" layoutX="443.0" layoutY="150.0" prefHeight="25.0" prefWidth="95.0" />
+                        <TextField id="settf" fx:id="settf" layoutX="314.0" layoutY="307.0" />
+                        <TextField id="eettf" fx:id="eettf" layoutX="314.0" layoutY="356.0" />
+                        <Separator layoutX="287.0" layoutY="54.0" orientation="VERTICAL" prefHeight="158.0" prefWidth="4.0" />
+                        <Separator layoutX="51.0" layoutY="252.0" prefHeight="0.0" prefWidth="493.0" />
+                        <Separator layoutX="49.0" layoutY="448.0" prefHeight="0.0" prefWidth="489.0" />
+                        <ProgressBar id="pbar" fx:id="pbar" layoutX="56.0" layoutY="463.0" prefHeight="18.0" prefWidth="474.0" progress="0.0" style="-fx-background-color: white;" />
+                        <Button id="start" fx:id="start" layoutX="241.0" layoutY="407.0" mnemonicParsing="false" onAction="#startExtracting" style="-fx-background-color: #319bdd; -fx-text-fill: white;" text="Start Extraction" textFill="#e4d8b0" />
+                        <Label id="linfo2" fx:id="linfo2" layoutX="196.0" layoutY="489.0" prefHeight="17.0" prefWidth="194.0" />
+                     </children></AnchorPane>
+            </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+    </children>
+</AnchorPane>

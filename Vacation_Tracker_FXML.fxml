@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.effect.Blend?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<TabPane id="TabbedPane" fx:id="TabbedPane" accessibleText="VacationTracker" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="478.0" prefWidth="659.0" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tools.Vacation_Tracker_FXMLController">
+  <tabs>
+    <Tab id="TAddNewEntry" fx:id="TAddNewEntry" text="Resource Directory">
+      <content>
+        <AnchorPane id="TTAddNewEntry" fx:id="TTAddNewEntry" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <Label id="lab1" fx:id="lab1" layoutX="134.0" layoutY="113.0" prefHeight="17.0" prefWidth="86.0" text="Enterprise ID" />
+                  <TextField id="tf1" fx:id="Atf1" editable="false" layoutX="290.0" layoutY="108.0" prefHeight="31.0" prefWidth="147.0" />
+                  <Label id="lab2" fx:id="lab2" layoutX="134.0" layoutY="152.0" prefHeight="17.0" prefWidth="86.0" text="Accenture ID" />
+                  <TextField id="tf2" fx:id="Atf2" editable="false" layoutX="289.0" layoutY="147.0" prefHeight="31.0" prefWidth="148.0" />
+                  <Label id="lab3" fx:id="lab3" layoutX="132.0" layoutY="203.0" prefHeight="21.0" prefWidth="104.0" text="Project Name" />
+                  <Label id="lab4" fx:id="lab4" layoutX="134.0" layoutY="257.0" prefHeight="17.0" prefWidth="86.0" text="Team Name" />
+                  <Label id="lab5" fx:id="lab5" layoutX="134.0" layoutY="312.0" prefHeight="21.0" prefWidth="113.0" text="Resource Type" />
+                  <Button id="BAddNewEntry" fx:id="BAddNewEntry" layoutX="48.0" layoutY="364.0" mnemonicParsing="false" onAction="#BAddNewEntry" pickOnBounds="false" prefHeight="28.0" prefWidth="115.0" style="-fx-background-color: #319bdd; -fx-text-fill: white;" text="Add New Entry">
+                     <font>
+                        <Font name="Calibri Bold" size="15.0" />
+                     </font></Button>
+                  <Label id="lab6" fx:id="AAlab6" layoutX="14.0" layoutY="12.0" prefHeight="17.0" prefWidth="109.0" text="Authorization ID" />
+                  <PasswordField id="Apwd" fx:id="Apwd" layoutX="134.0" layoutY="7.0" onAction="#BAddNewEntry" />
+                  <ComboBox id="ANcb1" fx:id="ANcb1" layoutX="289.0" layoutY="197.0" prefWidth="150.0" style="-fx-border-color: #319bdd;" visibleRowCount="4">
+                     <effect>
+                        <Blend mode="COLOR_BURN" />
+                     </effect></ComboBox>
+                  <ComboBox id="ANcb2" fx:id="ANcb2" layoutX="289.0" layoutY="251.0" prefWidth="150.0" style="-fx-border-color: #319bdd;" visibleRowCount="4">
+                     <effect>
+                        <Blend mode="COLOR_BURN" />
+                     </effect></ComboBox>
+                  <ComboBox id="ANcb3" fx:id="ANcb3" layoutX="289.0" layoutY="306.0" prefHeight="33.0" prefWidth="151.0" style="-fx-border-color: #319bdd;" visibleRowCount="3">
+                     <effect>
+                        <Blend mode="COLOR_BURN" />
+                     </effect></ComboBox>
+                  <Label layoutX="134.0" layoutY="64.0" text="Existing Employee" />
+                  <ComboBox id="rdecb" fx:id="rdecb" layoutX="290.0" layoutY="58.0" onAction="#RDCboxAction" prefHeight="33.0" prefWidth="146.0" style="-fx-border-color: #319bdd;" visibleRowCount="15">
+                     <effect>
+                        <Blend mode="COLOR_BURN" />
+                     </effect>
+                  </ComboBox>
+                  <Button id="rdub" fx:id="rdub" layoutX="263.0" layoutY="364.0" mnemonicParsing="false" onAction="#RDBUpdate" prefHeight="28.0" prefWidth="116.0" style="-fx-background-color: #319bdd; -fx-text-fill: white;" text="Update" textFill="WHITE">
+                     <font>
+                        <Font name="Calibri Bold" size="15.0" />
+                     </font>
+                  </Button>
+                  <Button id="rdbd" fx:id="rdbd" layoutX="476.0" layoutY="364.0" mnemonicParsing="false" onAction="#RDBDelete" prefHeight="28.0" prefWidth="89.0" style="-fx-background-color: #319bdd; -fx-text-fill: white;" text="Delete">
+                     <font>
+                        <Font name="Calibri Bold" size="15.0" />
+                     </font>
+                  </Button>
+               </children>
+               <effect>
+                  <Blend />
+               </effect></AnchorPane>
+      </content>
+    </Tab>
+      <Tab id="TSearch" fx:id="TSearch" onSelectionChanged="#Sinit" text="Search">
+         <content>
+            <AnchorPane id="TTSearch" fx:id="TTSearch" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <TextArea id="Sta" fx:id="Sta" layoutX="337.0" layoutY="19.0" prefHeight="318.0" prefWidth="277.0" style="-fx-background-color: black; -fx-border-color: #319bdd; -fx-border-width: 2;" />
+                  <PasswordField id="Spwd" fx:id="Spwd" layoutX="144.0" layoutY="14.0" prefHeight="31.0" prefWidth="159.0" />
+                  <Label id="Salab" fx:id="Salab" layoutX="13.0" layoutY="18.0" prefHeight="17.0" prefWidth="115.0" text="Authorization ID" />
+                  <ComboBox id="Scb1" fx:id="Scb1" layoutX="151.0" layoutY="99.0" prefWidth="150.0" style="-fx-border-color: #319bdd;" visibleRowCount="4">
+                     <effect>
+                        <Blend mode="COLOR_BURN" />
+                     </effect>
+                  </ComboBox>
+                  <ComboBox id="Scb2" fx:id="Scb2" layoutX="151.0" layoutY="162.0" prefWidth="150.0" style="-fx-border-color: #319bdd;" visibleRowCount="4">
+                     <effect>
+                        <Blend mode="COLOR_BURN" />
+                     </effect>
+                  </ComboBox>
+                  <ComboBox id="Scb3" fx:id="Scb3" layoutX="151.0" layoutY="221.0" prefWidth="150.0" style="-fx-border-color: #319bdd;" visibleRowCount="4">
+                     <effect>
+                        <Blend mode="COLOR_BURN" />
+                     </effect>
+                  </ComboBox>
+                  <Label id="Stnlab" fx:id="Stnlab" layoutX="23.0" layoutY="106.0" prefHeight="17.0" prefWidth="135.0" text="Team Name" />
+                  <Label id="Spnlab" fx:id="Spnlab" layoutX="23.0" layoutY="167.0" prefHeight="17.0" prefWidth="127.0" text="Project Name" />
+                  <Label id="Sptlab" fx:id="Sptlab" layoutX="23.0" layoutY="226.0" prefHeight="17.0" prefWidth="107.0" text="Project Type" />
+                  <Button id="Sbtn" fx:id="Sbtn" layoutX="82.0" layoutY="297.0" mnemonicParsing="false" onAction="#SButton" prefHeight="25.0" prefWidth="137.0" style="-fx-background-color: #319bdd; -fx-text-fill: white;" text="Search">
+                     <font>
+                        <Font name="Calibri Bold" size="14.0" />
+                     </font></Button>
+                  <Button id="Sbtn2" fx:id="Sbtn2" layoutX="429.0" layoutY="360.0" mnemonicParsing="false" onAction="#SCButton" prefHeight="25.0" prefWidth="93.0" style="-fx-background-color: #319bdd; -fx-text-fill: white;" text="Clear">
+                     <font>
+                        <Font name="Calibri Bold" size="14.0" />
+                     </font></Button>
+               </children>
+               <effect>
+                  <Blend />
+               </effect></AnchorPane>
+         </content>
+      </Tab>
+      <Tab id="TAddItem" fx:id="TAddItem" text="Add Item">
+        <content>
+          <AnchorPane id="TTAddItem" fx:id="TTAddItem" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <Label id="AIlab" fx:id="AIlab" layoutX="14.0" layoutY="26.0" prefHeight="21.0" prefWidth="111.0" text="Authorization ID" />
+                  <PasswordField id="AIpwd" fx:id="AIpwd" layoutX="140.0" layoutY="21.0" />
+                  <Label id="AIcnt" fx:id="AIcnt" layoutX="163.0" layoutY="85.0" prefHeight="17.0" prefWidth="72.0" text="Content" />
+                  <TextField id="AItf1" fx:id="AItf1" layoutX="276.0" layoutY="81.0" />
+                  <Button id="AIAddTeamName" fx:id="AIAddTeamName" layoutX="274.0" layoutY="306.0" mnemonicParsing="false" onAction="#BAIAddDelete" prefHeight="30.0" prefWidth="111.0" style="-fx-background-color: #319bdd; -fx-text-fill: white;" text="Add / Delete">
+                     <font>
+                        <Font name="Calibri Bold" size="14.0" />
+                     </font></Button>
+                  <RadioButton id="rbapn" fx:id="rbapn" layoutX="111.0" layoutY="148.0" mnemonicParsing="false" text="Add Project Name" textFill="#319bdd">
+                     <effect>
+                        <Blend mode="COLOR_BURN" />
+                     </effect>
+                     <toggleGroup>
+                        <ToggleGroup fx:id="AddItem" />
+                     </toggleGroup>
+                  </RadioButton>
+                  <RadioButton id="rbatn" fx:id="rbatn" layoutX="111.0" layoutY="194.0" mnemonicParsing="false" text="Add Team Name" textFill="#319bdd" toggleGroup="$AddItem">
+                     <effect>
+                        <Blend mode="COLOR_BURN" />
+                     </effect>
+                  </RadioButton>
+                  <RadioButton id="rbat" fx:id="rbat" layoutX="112.0" layoutY="238.0" mnemonicParsing="false" text="Add Table" textFill="#319bdd" toggleGroup="$AddItem">
+                     <effect>
+                        <Blend mode="COLOR_BURN" />
+                     </effect>
+                  </RadioButton>
+                  <RadioButton id="rbdpn" fx:id="rbdpn" layoutX="407.0" layoutY="148.0" mnemonicParsing="false" text="Delete Project Name" textFill="#319bdd" toggleGroup="$AddItem">
+                     <effect>
+                        <Blend mode="COLOR_BURN" />
+                     </effect>
+                  </RadioButton>
+                  <RadioButton id="rbdtn" fx:id="rbdtn" layoutX="407.0" layoutY="194.0" mnemonicParsing="false" text="Delete Team Name" textFill="#319bdd" toggleGroup="$AddItem">
+                     <effect>
+                        <Blend mode="COLOR_BURN" />
+                     </effect>
+                  </RadioButton>
+                  <RadioButton id="rbdt" fx:id="rbdt" layoutX="407.0" layoutY="238.0" mnemonicParsing="false" text="Delete Table" textFill="#319bdd" toggleGroup="$AddItem">
+                     <effect>
+                        <Blend mode="COLOR_BURN" />
+                     </effect>
+                  </RadioButton>
+                  <Separator layoutX="52.0" layoutY="132.0" prefHeight="3.0" prefWidth="553.0" />
+                  <Separator layoutX="49.0" layoutY="132.0" orientation="VERTICAL" prefHeight="154.0" prefWidth="0.0" />
+                  <Separator layoutX="49.0" layoutY="284.0" prefHeight="0.0" prefWidth="556.0" />
+                  <Separator layoutX="601.0" layoutY="132.0" orientation="VERTICAL" prefHeight="151.0" prefWidth="0.0" />
+               </children>
+               <effect>
+                  <Blend />
+               </effect>
+            </AnchorPane>
+        </content>
+      </Tab>
+      <Tab id="TUpdateVacationInfo" fx:id="TUpdateVacationInfo" text="Update Info">
+        <content>
+          <AnchorPane id="TTUpdateVacationInfo" fx:id="TTUpdateVacationInfo" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <Label id="UIlaid" fx:id="UIlaid" layoutX="17.0" layoutY="69.0" prefHeight="21.0" prefWidth="92.0" text="Accenture ID" />
+                  <Label id="UIltname" fx:id="UIltname" layoutX="26.0" layoutY="276.0" prefHeight="17.0" prefWidth="113.0" text="Table Name" />
+                  <Label id="UIvdate" fx:id="UIvdate" layoutX="21.0" layoutY="127.0" prefHeight="21.0" prefWidth="145.0" text="Vacation Start Date" />
+                  <DatePicker id="UIdpic1" fx:id="UIdpic1" layoutX="180.0" layoutY="120.0" prefHeight="29.0" prefWidth="154.0" showWeekNumbers="true" style="-fx-background-color: #319bdd; -fx-border-color: white; -fx-border-width: 2;">
+                     <effect>
+                        <ColorAdjust contrast="0.45" />
+                     </effect>
+                  </DatePicker>
+                  <ComboBox id="UIcb2" fx:id="UIcb2" layoutX="177.0" layoutY="270.0" prefHeight="26.0" prefWidth="156.0" style="-fx-border-color: #319bdd;" visibleRowCount="5">
+                     <effect>
+                        <Blend mode="COLOR_BURN" />
+                     </effect>
+                  </ComboBox>
+                  <ComboBox id="UIcb1" fx:id="UIcb1" layoutX="177.0" layoutY="221.0" prefHeight="27.0" prefWidth="153.0" style="-fx-border-color: #319bdd;" visibleRowCount="3">
+                     <effect>
+                        <Blend mode="COLOR_BURN" />
+                     </effect>
+                  </ComboBox>
+                  <Label id="UItype" fx:id="UItype" layoutX="26.0" layoutY="227.0" prefHeight="21.0" prefWidth="47.0" text="Type" />
+                  <Button id="BUpdate" fx:id="BUpdate" layoutX="98.0" layoutY="333.0" mnemonicParsing="false" onAction="#BUpdate" prefHeight="25.0" prefWidth="123.0" style="-fx-background-color: #319bdd; -fx-text-fill: white;" text="Update">
+                     <font>
+                        <Font name="Calibri Bold" size="14.0" />
+                     </font></Button>
+                  <Label id="UIlvedat" fx:id="UIlvedat" layoutX="21.0" layoutY="177.0" prefHeight="21.0" prefWidth="129.0" text="Vacation End Date" />
+                  <DatePicker id="UIvedatdpic" fx:id="UIvedatdpic" layoutX="179.0" layoutY="170.0" prefHeight="29.0" prefWidth="155.0" showWeekNumbers="true" style="-fx-background-color: #319bdd; -fx-border-color: white; -fx-border-width: 2;">
+                     <effect>
+                        <ColorAdjust contrast="0.45" />
+                     </effect>
+                  </DatePicker>
+                  <ComboBox id="uiecb" fx:id="uiecb" layoutX="182.0" layoutY="63.0" onAction="#UIECB" prefWidth="150.0" style="-fx-border-color: #319bdd;">
+                     <effect>
+                        <Blend mode="COLOR_BURN" />
+                     </effect>
+                  </ComboBox>
+                  <ListView id="uilv" fx:id="uilv" layoutX="344.0" layoutY="20.0" prefHeight="400.0" prefWidth="286.0" style="-fx-background-color: white; -fx-border-color: #319bdd; -fx-border-width: 2;">
+                     <effect>
+                        <Blend mode="COLOR_BURN" />
+                     </effect>
+                  </ListView>
+               </children>
+               <effect>
+                  <Blend />
+               </effect>
+            </AnchorPane>
+        </content>
+      </Tab>
+      <Tab id="TRandomFetch" fx:id="TRandomFetch" text="Random Fetch">
+        <content>
+          <AnchorPane id="TTRandomFetch" fx:id="TTRandomFetch" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <Button id="RFFetchData" fx:id="RFFetchData" layoutX="137.0" layoutY="394.0" mnemonicParsing="false" onAction="#RFBFetchData" prefHeight="29.0" prefWidth="101.0" style="-fx-background-color: #319bdd; -fx-text-fill: white;" text="Fetch Data" textFill="#270eb1">
+                     <font>
+                        <Font name="Calibri Bold" size="14.0" />
+                     </font></Button>
+                  <Button id="RFExportToFile" fx:id="RFExportToFile" layoutX="300.0" layoutY="395.0" mnemonicParsing="false" onAction="#RFBExportToFile" style="-fx-background-color: #319bdd; -fx-text-fill: white;" text="Export To File">
+                     <font>
+                        <Font name="Calibri Bold" size="14.0" />
+                     </font></Button>
+                  <Button id="RFClear" fx:id="RFClear" layoutX="473.0" layoutY="395.0" mnemonicParsing="false" onAction="#RFBClear" prefHeight="27.0" prefWidth="81.0" style="-fx-background-color: #319bdd; -fx-text-fill: white;" text="Clear">
+                     <font>
+                        <Font name="Calibri Bold" size="14.0" />
+                     </font></Button>
+                  <ComboBox id="RFcbtname" fx:id="RFcbtname" layoutX="134.0" layoutY="172.0" prefWidth="150.0" style="-fx-border-color: #319bdd;" visibleRowCount="4">
+                     <effect>
+                        <Blend mode="COLOR_BURN" />
+                     </effect>
+                  </ComboBox>
+                  <ComboBox id="RFcbpname" fx:id="RFcbpname" layoutX="134.0" layoutY="218.0" prefWidth="150.0" style="-fx-border-color: #319bdd;" visibleRowCount="4">
+                     <effect>
+                        <Blend mode="COLOR_BURN" />
+                     </effect>
+                  </ComboBox>
+                  <ComboBox id="RFcbrtype" fx:id="RFcbrtype" layoutX="134.0" layoutY="259.0" prefWidth="150.0" style="-fx-border-color: #319bdd;" visibleRowCount="4">
+                     <effect>
+                        <Blend mode="COLOR_BURN" />
+                     </effect>
+                  </ComboBox>
+                  <ComboBox id="RFcbtype" fx:id="RFcbtype" layoutX="134.0" layoutY="306.0" prefWidth="150.0" style="-fx-border-color: #319bdd;" visibleRowCount="3">
+                     <effect>
+                        <Blend mode="COLOR_BURN" />
+                     </effect>
+                  </ComboBox>
+                  <DatePicker id="RFsdpic" fx:id="RFsdpic" layoutX="133.0" layoutY="91.0" prefHeight="29.0" prefWidth="151.0" style="-fx-background-color: #319bdd; -fx-border-color: white; -fx-border-width: 2;">
+                     <effect>
+                        <ColorAdjust contrast="0.45" />
+                     </effect></DatePicker>
+                  <Label id="RFlaid" fx:id="RFlaid" layoutX="14.0" layoutY="14.0" text="Authorization ID" />
+                  <Label id="RFlsdate" fx:id="RFlsdate" layoutX="15.0" layoutY="98.0" prefHeight="21.0" prefWidth="98.0" text="Starting Date" />
+                  <Label id="RFltname" fx:id="RFltname" layoutX="17.0" layoutY="178.0" prefHeight="21.0" prefWidth="87.0" text="Team Name" />
+                  <Label id="RFlpname" fx:id="RFlpname" layoutX="18.0" layoutY="224.0" prefHeight="21.0" prefWidth="101.0" text="Project Name" />
+                  <Label id="RFlrtype" fx:id="RFlrtype" layoutX="20.0" layoutY="265.0" text="Resource Type" />
+                  <Label id="RFltype" fx:id="RFltype" layoutX="20.0" layoutY="312.0" text="Type" />
+                  <Label id="RFltabname" fx:id="RFltabname" layoutX="16.0" layoutY="357.0" prefHeight="21.0" prefWidth="89.0" text="Table Name" />
+                  <Label id="RDlaid" fx:id="RDlaid" layoutX="13.0" layoutY="56.0" prefHeight="21.0" prefWidth="93.0" text="Enterprise ID" />
+                  <PasswordField id="RFpwd" fx:id="RFpwd" layoutX="137.0" layoutY="9.0" prefHeight="31.0" prefWidth="171.0" />
+                  <TextField id="RFtfaid" fx:id="RFtfaid" layoutX="133.0" layoutY="52.0" prefHeight="31.0" prefWidth="151.0" />
+                  <TextArea id="RFta" fx:id="RFta" layoutX="308.0" layoutY="60.0" prefHeight="325.0" prefWidth="315.0" style="-fx-background-color: black; -fx-border-color: #319bdd; -fx-border-width: 2;" />
+                  <TextField id="RFtffname" fx:id="RFtffname" layoutX="439.0" layoutY="20.0" prefHeight="31.0" prefWidth="149.0" />
+                  <DatePicker id="RFedpic" fx:id="RFedpic" layoutX="133.0" layoutY="131.0" prefHeight="29.0" prefWidth="152.0" style="-fx-background-color: #319bdd; -fx-border-width: 2; -fx-border-color: white;">
+                     <effect>
+                        <ColorAdjust contrast="0.45" />
+                     </effect></DatePicker>
+                  <Label layoutX="16.0" layoutY="138.0" prefHeight="21.0" prefWidth="86.0" text="Ending Date" />
+                  <ComboBox id="RFcbtabname" fx:id="RFcbtabname" layoutX="131.0" layoutY="351.0" prefHeight="33.0" prefWidth="153.0" style="-fx-border-color: #319bdd;" visibleRowCount="5">
+                     <effect>
+                        <Blend mode="COLOR_BURN" />
+                     </effect>
+                  </ComboBox>
+                  <Button id="bfname" fx:id="bfname" layoutX="355.0" layoutY="20.0" mnemonicParsing="false" onAction="#BFname" prefHeight="31.0" prefWidth="84.0" style="-fx-background-color: #319bdd; -fx-text-fill: white;" text="File Name">
+                     <font>
+                        <Font name="Calibri Bold" size="14.0" />
+                     </font>
+                  </Button>
+               </children>
+               <effect>
+                  <Blend />
+               </effect>
+            </AnchorPane>
+        </content>
+      </Tab>
+  </tabs>
+</TabPane>
