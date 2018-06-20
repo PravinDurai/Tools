@@ -2148,7 +2148,8 @@ for(int j=0;tnp[j]!=null;j++)
                String pname;
                String tname;
                String vsql="select TableName from pravin1.TableNames";
-               Connection vcon=DriverManager.getConnection("jdbc:mysql://INITDURAIPL3C.corp.emc.com:3306/pravin1","pravin","Pravin@1");
+               String temppp;
+	       Connection vcon=DriverManager.getConnection("jdbc:mysql://INITDURAIPL3C.corp.emc.com:3306/pravin1","pravin","Pravin@1");
                //Connection con=DriverManager.getConnection("jdbc:odbc:vt");
                Statement vst=vcon.createStatement();
                ResultSet vrs=vst.executeQuery(vsql);
